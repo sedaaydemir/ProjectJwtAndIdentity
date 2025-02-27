@@ -1,0 +1,26 @@
+﻿
+@model List<ProjectJwtAndIdentity.Entities.AppUser>
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    </br></<br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Kullanıcı Adı Soyadı</th>
+            <th>Role Ata</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name @item.Surname</td>
+                <td><a href="/Role/AssignRole/@item.Id" class="btn btn-dark">Role Ata</a></td>
+            </tr>
+        }
+    </table>
+</div>
