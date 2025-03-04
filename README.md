@@ -1,1 +1,1 @@
-Son Web Token projesi
+Json Web Token projesi
